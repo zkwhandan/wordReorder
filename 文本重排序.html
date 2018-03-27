@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>文本重排序</title>
+        <style>
+            div {
+                text-align: center;
+                margin: auto;
+                border: 1px solid #bbb;
+                padding: 0 0 25px 0;
+                max-width: 1000px;
+            }
+            textarea {width: 90%; height: 500px;}
+            button {
+                background: #922;
+                color: #fff;
+                padding: 10px 15px;
+                border: 0;
+                cursor: pointer;
+                width: 30%;
+            }
+        </style>
+        <script>
+            String.prototype.replaceAll = function(s1,s2){
+                return this.replace(new RegExp(s1,"gm"),s2);
+            }
+            function reorder(){
+                context = document.getElementById('context').value;
+                dict = '阿安岸昂扒吧八巴拔把坝爸白百败板版扮拌伴半办包饱宝抱报杯北贝备奔本比彼毕币闭必边变表别兵冰丙并拨波伯泊驳卜补不布步怖材才财采参灿苍仓厕侧册层叉岔拆产昌场长肠厂畅抄吵炒车扯彻臣辰尘沉陈衬成呈诚承吃池迟驰齿尺赤斥充冲虫抽仇丑初出处川传串床闯创吹炊垂纯词此刺次匆从丛村存寸达打大呆代担丹单旦但诞当刀岛导到的灯低抵底地弟典电店叼吊钓丁盯叮钉顶定订丢东冬动冻抖斗豆杜肚队对吨多夺朵而儿耳二发伐乏法帆凡反返范贩犯饭泛坊芳方房防妨仿访纺放非飞肥肺废沸芬吩分纷坟奋份丰风讽奉凤佛否夫肤扶伏服抚斧府付父负附妇咐该改干甘杆肝秆冈刚纲岗杠告个各更工攻功供公弓巩贡共勾沟狗构购估孤姑古谷股固刮瓜乖拐怪关官观贯光广规归龟轨柜国果过含旱汗汉好号禾和何合河轰宏红吼后呼乎忽狐虎护互户花华画划化话怀坏欢环还幻灰回会汇昏伙火或货击圾机肌饥鸡吉极及即级几己技季剂计记忌际纪夹佳加甲价驾歼坚尖间肩艰奸拣见件建江讲匠降交郊角叫阶劫节杰姐戒介届巾斤金今仅进近尽劲茎京经井径净究纠久九旧拘居局拒巨具句卷决均军君卡开凯刊扛抗炕考壳可克刻肯坑空孔口扣苦库夸块快狂矿旷况亏昆困扩垃拉来拦兰郎劳牢老乐泪冷李里礼丽厉励历利例立隶力连怜帘练良两疗辽了列劣林邻伶灵岭另令刘六龙垄拢芦炉虏录陆驴卵乱轮论罗妈码马吗买麦卖迈芒盲忙茅毛矛茂么没每妹门闷们孟米免苗庙妙灭民明鸣名命抹末沫亩母木目牧那纳乃奶男闹呢内泥尼你年念鸟尿宁牛扭纽农弄奴努女欧爬怕拍判乓抛泡佩朋批披皮匹片贫乒苹平凭评坡泼迫扑仆朴妻七其奇齐岂乞企启气弃汽千迁浅欠枪抢乔侨巧切茄且芹青顷庆穷丘求区曲屈驱取去权全犬券劝却让扰仁人忍任认刃扔仍日肉如乳入软若三伞丧扫色杀沙纱山删衫闪陕伤上尚勺少绍舌舍社设申伸身沈审肾声生升圣师失诗尸十石时什实识史使驶始式示士世事势侍饰氏市视试收手守寿受叔书术述束刷甩帅双水私司丝死寺四似饲松宋苏诉肃岁孙所他它她抬台太态贪坛坦叹汤讨体天田条帖厅听同投头秃图土吐兔团吞屯拖托妥瓦外玩丸完万汪王亡网往旺忘妄危违围为委伟伪尾未味位卫文纹问我卧沃呜乌污无吴武五午伍物勿务析西吸希夕习系戏细下吓先仙纤贤闲弦现县限线乡详享向小孝些协邪胁写泄泻欣辛心兴刑形行幸杏性姓兄凶休朽秀许序学穴血旬询寻巡训讯迅压押呀芽牙亚严岩延言炎沿厌央杨扬羊阳仰妖爷冶也页业叶夜一医依衣仪宜已乙以艺易亿役亦忆义议译异因阴饮引印英应迎拥佣咏泳永用优忧尤由邮犹油有友右又幼于余鱼予雨与屿宇羽玉育元园员远约月云匀允运孕杂灾再在枣早皂灶责择则泽扎轧闸宅沾斩占张丈帐仗胀招找兆召折者这贞针侦枕诊阵征争正郑证芝枝支知肢汁之织直执侄址止只旨纸志至帜制质治中忠终肿众舟周州宙朱竹主助住注驻抓爪专转庄壮状仔子自字宗纵走足阻组左作坐叨';
+                for(i=0; i<dict.length; i+=2) {
+                    context = context.replaceAll(dict[i], '\1\2\3').replaceAll(dict[i+1], dict[i]).replaceAll('\1\2\3', dict[i+1])
+                }
+                document.getElementById('context').value = context;
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h2>文本重排序</h2>
+            <textarea id="context"></textarea><br/>
+            <button onclick="document.getElementById('context').value = '';">清空</button><button onclick="reorder()" style="background: #292;width: 60%;">重排序</button>
+        </div>
+    </body>
+</html>
